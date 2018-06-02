@@ -18,12 +18,19 @@ void setup() {
 void loop() {
 	m_leonardo.run();
 	m_leonardo.commit();
+  if (Serial.available()) {
+    m_leonardo.nanopi_event();
+  }
+  if (Serial1.available()) {
+    m_leonardo.esp_event();
+  }
 }
 
-void serialEvent() {
-	m_leonardo.nanopi_event();
-}
-
-void serialEvent1() {
-	m_leonardo.esp_event();
-}
+//void serialEvent() {
+//  Serial.println("asdfasfd");
+//	m_leonardo.nanopi_event();
+//}
+//
+//void serialEvent1() {
+//	m_leonardo.esp_event();
+//}

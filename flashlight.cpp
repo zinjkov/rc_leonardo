@@ -17,7 +17,7 @@ void flashlight::init() {
 }
 
 void flashlight::run(int8_t dir) {
-	if (m_timer.elapsed() > 40) {
+	if (m_timer.elapsed() > 3) {
 		m_val = constrain(m_val + dir, config::flashlight::MIN, config::flashlight::MAX);
 		m_flash.writeMicroseconds(m_val);
 		m_timer.restart();

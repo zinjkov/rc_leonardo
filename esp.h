@@ -13,7 +13,8 @@ public:
 	void commit(rov_types::rov_leo_telimetry &t);
 
 private:
-	bool m_is_find;
+	bool m_is_connected = false;
+	bool m_is_find = false;
 	String m_last_response;
 	uint8_t m_act = 0;
 	bool m_response_recieved;
@@ -22,9 +23,9 @@ private:
 	uint8_t m_state = 0;
 	uint8_t m_communication = 0;
 
-	const String m_commands[5] = {
+	const String m_commands[2] = {
 		"AT+CWLAP=\"RCROV_LIFTER\"",
-		"AT+CWJAP=\"RCROV_LIFTER\",\"00000000\",\"\"",
+		"AT+CWJAP=\"RCROV_LIFTER\",\"00000000\"",
 	};
 
 	const uint8_t m_state_mach[2][2] = {

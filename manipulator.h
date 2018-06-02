@@ -13,6 +13,6 @@ public:
 private:
 	Servo m_servo;
 	timer m_timer;
-	uint8_t m_val;
+	int m_val;
 };
 

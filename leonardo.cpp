@@ -20,6 +20,7 @@ void leonardo::init() {
 }
 
 void leonardo::run() {
+
 	m_manipulator.run(m_control.secondary_manipulator);
 	m_flashlight.run(m_control.flashlight);
 	m_esp.run(m_control.realease);
