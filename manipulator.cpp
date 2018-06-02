@@ -26,3 +26,8 @@ void manipulator::run(int8_t dir)
 		m_timer.restart();
 	}
 }
+
+void manipulator::commit(rov_types::rov_leo_telimetry & t)
+{
+	t.secondary_manipulator = m_val;
+}

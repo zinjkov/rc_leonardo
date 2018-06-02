@@ -27,6 +27,12 @@ void esp::run(uint8_t act) {
 	request(m_commands[m_state]);
 }
 
+void esp::commit(rov_types::rov_leo_telimetry & t)
+{
+	t.esp = m_state;
+	t.esp_comm = m_communication;
+}
+
 void esp::send_request(String request)
 {
 	request += "\r\n";

@@ -6,7 +6,7 @@ namespace config {
 			PIN = 5,
 		};
 		enum : uint16_t {
-			MIN = 1300,
+			MIN = 1200,
 		    MAX = 2000
 		};
 	};

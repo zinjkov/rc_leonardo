@@ -17,6 +17,7 @@ void setup() {
 
 void loop() {
 	m_leonardo.run();
+	m_leonardo.commit();
 }
 
 void serialEvent() {

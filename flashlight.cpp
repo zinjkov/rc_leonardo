@@ -24,3 +24,8 @@ void flashlight::run(int8_t dir) {
 		
 	}
 }
+
+void flashlight::commit(rov_types::rov_leo_telimetry & t)
+{
+	t.flashlight = m_val;
+}

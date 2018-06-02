@@ -1,6 +1,7 @@
 #pragma once
 #include <Arduino.h>
 #include "timer.h"
+#include "rov_data_types.hpp"
 class esp
 {
 public:
@@ -9,6 +10,7 @@ public:
 	void init();
 	void read();
 	void run(uint8_t act);
+	void commit(rov_types::rov_leo_telimetry &t);
 
 private:
 	bool m_is_find;
